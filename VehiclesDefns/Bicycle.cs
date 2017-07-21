@@ -1,16 +1,19 @@
 using System;
 using System.Linq;
-// using System.Collections.Generic;
 
 namespace Vehicles 
 {
-    // public class TrekBicycle : IVehicle
-    public class TrekBicycle : IGroundBased, IWheelsDoors
+    public class Bicycle : GroundBased, IGroundBased, IVehicle
     {
-        public int Wheels { get; set; } = 2;
-        public int Doors { get; set; } = 0;
-        public int PassengerCapacity { get; set; } = 1;
-        public double MaxLandSpeed { get; set; } = 45.0;
+        public int Wheels => 2;
+        public int PassengerCapacity { get; set; }
+        public double MaxLandSpeed { get; set; }
+
+        public Bicycle(int passengerCapacity, int maxLandSpeed)
+        {
+            PassengerCapacity = passengerCapacity;
+            MaxLandSpeed = maxLandSpeed;
+        }
 
         public void Drive()
         {

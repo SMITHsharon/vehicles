@@ -1,16 +1,28 @@
 using System;
 using System.Linq;
-// using System.Collections.Generic;
 
 namespace Vehicles 
 {
-    // public class TrekBicycle : IVehicle
-    public class SoccerMomVan : IGroundBased, IWheelsDoors
+    public class SoccerMomVan : GroundBased, IWheelsDoors, IEngine, IGroundBased, IVehicle
     {
-        public int Wheels { get; set; } = 4;
-        public int Doors { get; set; } = 5;
-        public int PassengerCapacity { get; set; } = 8;
-        public double MaxLandSpeed { get; set; } = 95.0;
+        public int Wheels { get; set; }
+        public int Doors { get; set; }
+        public int PassengerCapacity { get; set; }
+        public double MaxLandSpeed { get; set; }
+        public string TransmissionType { get; set; }
+        public double EngineVolume { get; set; }
+
+        public SoccerMomVan (int wheels, int doors, int passengerCapacity, 
+                             double maxLandSpeed, string transmissionType, 
+                             double engineVolume)
+        {
+            Wheels = wheels;
+            Doors = doors;
+            PassengerCapacity = passengerCapacity;
+            MaxLandSpeed = maxLandSpeed;
+            TransmissionType = transmissionType;
+            EngineVolume = engineVolume;
+        }
 
         public void Drive()
         {

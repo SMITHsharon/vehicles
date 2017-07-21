@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-// using Vehicles.VehiclesDefns;
 
 namespace Vehicles
 {
-    public class xVehicle
+    public class zVehicle
     {
         public string Name { get; set; }
     }
