@@ -1,10 +1,11 @@
 using System;
 using System.Linq;
-using System.Collections.Generic;
+// using System.Collections.Generic;
 
 namespace Vehicles 
 {
-    public class Cessna : IVehicle
+    // public class Cessna : IVehicle
+    public class Cessna : IAirBased, IEngine, IWheelsDoors
     {
         public int Wheels { get; set; } = 3;
         public int Doors { get; set; } = 3;
@@ -12,8 +13,7 @@ namespace Vehicles
         public bool Winged { get; set; } = true;
         public string TransmissionType { get; set; } = "None";
         public double EngineVolume { get; set; } = 31.1;
-        public double MaxWaterSpeed { get; set; }
-        public double MaxLandSpeed { get; set; }
+        public double MaxLandSpeed { get; set; } = 50.0;
         public double MaxAirSpeed { get; set; } = 309.0;
 
         public void Drive()
