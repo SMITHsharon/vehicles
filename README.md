@@ -13,7 +13,7 @@ This exercise, written in C#, converted given code into a system that is more fl
 - Each class implements only the code that it needs. 
 - Created at least two types of each vehicle (water based, ground based, and air based).  
 - Built separate collections of all vehicles that are air-based (can fly), land-based (can drive), and water-based (can drive). 
-- Used a single for each statement for each collection, to have each vehicle fly/drive (output). 
+- Used a single `for each` statement for each collection, to have each vehicle fly/drive (output). 
 
 
 ### Technologies Used
