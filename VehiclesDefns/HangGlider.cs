@@ -3,23 +3,19 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Cessna : AirBased, IEngine, IWheelsDoors, IAirBased, IVehicle
+    public class HangGlider : AirBased, IEngine, IAirBased, IVehicle
     {
-        public int Wheels { get; set; } = 3;
-        public int Doors { get; set; } = 3;
-        public int PassengerCapacity { get; set; }
+        public int PassengerCapacity { get; set; } = 1;
         public bool Winged { get; set; } = true;
         public string TransmissionType { get; set; } = "None";
         public double EngineVolume { get; set; }
-        public double MaxLandSpeed { get; set; }
+        public double MaxLandSpeed { get; set; } = 0.0;
         public double MaxAirSpeed { get; set; }
 
-        public Cessna (int passengerCapacity, double engineVolume, 
-                       double maxLandSpeed, double maxAirSpeed)
+        public HangGlider (int passengerCapacity, double engineVolume, double maxAirSpeed)
         {
             PassengerCapacity = passengerCapacity;
             EngineVolume = engineVolume;
-            MaxLandSpeed = maxLandSpeed;
             MaxAirSpeed = maxAirSpeed;
         }
 
@@ -30,7 +26,7 @@ namespace Vehicles
 
         public void Fly()
         {
-            Console.WriteLine("The Cessna effortlessly glides through the clouds like a gleaming god of the Sun!");
+            Console.WriteLine("This hang glider effortlessly glides through the air like a bird ~~");
         }
 
         public void Start()

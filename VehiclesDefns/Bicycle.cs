@@ -9,7 +9,7 @@ namespace Vehicles
         public int PassengerCapacity { get; set; }
         public double MaxLandSpeed { get; set; }
 
-        public Bicycle(int passengerCapacity, int maxLandSpeed)
+        public Bicycle (int passengerCapacity, int maxLandSpeed)
         {
             PassengerCapacity = passengerCapacity;
             MaxLandSpeed = maxLandSpeed;

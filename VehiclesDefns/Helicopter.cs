@@ -3,23 +3,24 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Cessna : AirBased, IEngine, IWheelsDoors, IAirBased, IVehicle
+    public class Helicopter : AirBased, IEngine, IWheelsDoors, IAirBased, IVehicle
     {
-        public int Wheels { get; set; } = 3;
-        public int Doors { get; set; } = 3;
+        public int Wheels { get; set; } = 0;
+        public int Doors { get; set; }
         public int PassengerCapacity { get; set; }
-        public bool Winged { get; set; } = true;
-        public string TransmissionType { get; set; } = "None";
+        public bool Winged { get; set; } = false;
+        public string TransmissionType { get; set; }
         public double EngineVolume { get; set; }
-        public double MaxLandSpeed { get; set; }
+        public double MaxLandSpeed { get; set; } = 0;
         public double MaxAirSpeed { get; set; }
 
-        public Cessna (int passengerCapacity, double engineVolume, 
-                       double maxLandSpeed, double maxAirSpeed)
+        public Helicopter (int doors, int passengerCapacity, string transmissionType, 
+                           double engineVolume, double maxAirSpeed)
         {
+            Doors = doors;
             PassengerCapacity = passengerCapacity;
+            TransmissionType = transmissionType;
             EngineVolume = engineVolume;
-            MaxLandSpeed = maxLandSpeed;
             MaxAirSpeed = maxAirSpeed;
         }
 
@@ -30,7 +31,7 @@ namespace Vehicles
 
         public void Fly()
         {
-            Console.WriteLine("The Cessna effortlessly glides through the clouds like a gleaming god of the Sun!");
+            Console.WriteLine("The helicopter buzzes around with amazing agility!");
         }
 
         public void Start()
