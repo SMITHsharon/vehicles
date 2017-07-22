@@ -9,7 +9,6 @@ This exercise, written in C#, converted given code into a system that is more fl
 
 
 ### Project Specs
-#### Part 1
 - Converted given code into a system that is more flexible and extensible to accomodate any kind of vehicle class. 
 - Each class implements only the code that it needs. 
 - Created at least two types of each vehicle (water based, ground based, and air based).  
