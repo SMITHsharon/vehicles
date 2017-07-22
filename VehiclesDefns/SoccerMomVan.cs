@@ -12,10 +12,11 @@ namespace Vehicles
         public string TransmissionType { get; set; }
         public double EngineVolume { get; set; }
 
-        public SoccerMomVan (int wheels, int doors, int passengerCapacity, 
+        public SoccerMomVan (string name, int wheels, int doors, int passengerCapacity, 
                              double maxLandSpeed, string transmissionType, 
                              double engineVolume)
         {
+            Name = name;
             Wheels = wheels;
             Doors = doors;
             PassengerCapacity = passengerCapacity;
@@ -26,7 +27,7 @@ namespace Vehicles
 
         public void Drive()
         {
-            Console.WriteLine("This van hauls kids around!");
+            Console.WriteLine($"This {Name} van hauls piles of kids around!");
         }
 
         public void Fly()

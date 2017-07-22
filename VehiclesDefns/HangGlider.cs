@@ -12,8 +12,9 @@ namespace Vehicles
         public double MaxLandSpeed { get; set; } = 0.0;
         public double MaxAirSpeed { get; set; }
 
-        public HangGlider (int passengerCapacity, double engineVolume, double maxAirSpeed)
+        public HangGlider (string name, int passengerCapacity, double engineVolume, double maxAirSpeed)
         {
+            Name = name; 
             PassengerCapacity = passengerCapacity;
             EngineVolume = engineVolume;
             MaxAirSpeed = maxAirSpeed;
@@ -26,7 +27,7 @@ namespace Vehicles
 
         public void Fly()
         {
-            Console.WriteLine("This hang glider effortlessly glides through the air like a bird ~~");
+            Console.WriteLine($"This {Name} hang glider effortlessly glides through the air like a bird ~~");
         }
 
         public void Start()

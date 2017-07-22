@@ -14,9 +14,11 @@ namespace Vehicles
         public double MaxLandSpeed { get; set; } = 0;
         public double MaxAirSpeed { get; set; }
 
-        public Helicopter (int doors, int passengerCapacity, string transmissionType, 
-                           double engineVolume, double maxAirSpeed)
+        public Helicopter (string name, int doors, int passengerCapacity, 
+                           string transmissionType, double engineVolume, 
+                           double maxAirSpeed)
         {
+            Name = name;
             Doors = doors;
             PassengerCapacity = passengerCapacity;
             TransmissionType = transmissionType;
@@ -31,7 +33,7 @@ namespace Vehicles
 
         public void Fly()
         {
-            Console.WriteLine("The helicopter buzzes around with amazing agility!");
+            Console.WriteLine($"The {Name} helicopter buzzes around with amazing agility!");
         }
 
         public void Start()

@@ -3,16 +3,26 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class JetSki : IWaterBased, IEngine
+    public class JetSki : WaterBased, IEngine, IWaterBased, IVehicle
+    
     {
-        public int PassengerCapacity { get; set; } = 3;
-        public string TransmissionType { get; set; } = "Automatic"; // IVehicle
-        public double EngineVolume { get; set; } = 1498.0; // IVehicle
-        public double MaxWaterSpeed { get; set; } = 50.0; // IWaterBased
+        public int PassengerCapacity { get; set; }
+        public string TransmissionType { get; set; } = "Automatic";
+        public double EngineVolume { get; set; }
+        public double MaxWaterSpeed { get; set; }
+
+        public JetSki (string name, int passengerCapacity, 
+                       double engineVolume, int maxWaterSpeed)
+        {
+            Name = name;
+            PassengerCapacity = passengerCapacity;
+            EngineVolume = engineVolume;
+            MaxWaterSpeed = maxWaterSpeed;
+        }
 
         public void Drive()
         {
-            Console.WriteLine("The jetski zips through the waves with the greatest of ease");
+            Console.WriteLine($"The {Name} jetski zips through the waves with the greatest of ease!");
         }
 
         public void Fly()

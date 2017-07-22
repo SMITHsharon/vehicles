@@ -14,9 +14,10 @@ namespace Vehicles
         public double MaxLandSpeed { get; set; }
         public double MaxAirSpeed { get; set; }
 
-        public Cessna (int passengerCapacity, double engineVolume, 
+        public Cessna (string name, int passengerCapacity, double engineVolume, 
                        double maxLandSpeed, double maxAirSpeed)
         {
+            Name = name;
             PassengerCapacity = passengerCapacity;
             EngineVolume = engineVolume;
             MaxLandSpeed = maxLandSpeed;
@@ -30,7 +31,7 @@ namespace Vehicles
 
         public void Fly()
         {
-            Console.WriteLine("The Cessna effortlessly glides through the clouds like a gleaming god of the Sun!");
+            Console.WriteLine($"The {Name} Cessna effortlessly glides through the clouds like a gleaming god of the Sun!");
         }
 
         public void Start()

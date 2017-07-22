@@ -3,22 +3,21 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Bicycle : GroundBased, IGroundBased, IVehicle
+    public class Kayak : WaterBased, IWaterBased, IVehicle
+    
     {
-        public int Wheels => 2;
         public int PassengerCapacity { get; set; }
-        public double MaxLandSpeed { get; set; }
+        public double MaxWaterSpeed { get; set; } = 5;
 
-        public Bicycle (string name, int passengerCapacity, int maxLandSpeed)
+        public Kayak (string name, int passengerCapacity)
         {
             Name = name;
             PassengerCapacity = passengerCapacity;
-            MaxLandSpeed = maxLandSpeed;
         }
 
         public void Drive()
         {
-            Console.WriteLine($"This {Name} bicycle flies up those mountains!");
+            Console.WriteLine($"The {Name} kayak is the most amazing of all for solitude and serenity in the wilderness!");
         }
 
         public void Fly()

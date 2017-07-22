@@ -11,9 +11,10 @@ namespace Vehicles
         public double EngineVolume { get; set; }
         public double MaxLandSpeed { get; set; }
 
-        public Motorcycle (int passengerCapacity, string transmissionType, 
+        public Motorcycle (string name, int passengerCapacity, string transmissionType, 
                            double engineVolume, double maxLandSpeed)
         {
+            Name = name;
             PassengerCapacity = passengerCapacity;
             TransmissionType = transmissionType;
             EngineVolume = engineVolume;
@@ -22,7 +23,7 @@ namespace Vehicles
 
         public void Drive()
         {
-            Console.WriteLine("The motorcycle screams down the highway!");
+            Console.WriteLine($"The {Name} motorcycle screams down the highway!");
         }
 
         public void Fly()
