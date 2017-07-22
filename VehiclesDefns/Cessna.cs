@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Cessna : AirBased, IEngine, IWheelsDoors, IAirBased, IVehicle
+    public class Cessna : Vehicle, IEngine, IWheelsDoors, IAirBased, IVehicle
     {
         public int Wheels { get; set; } = 3;
         public int Doors { get; set; } = 3;
@@ -24,11 +24,6 @@ namespace Vehicles
             MaxAirSpeed = maxAirSpeed;
         }
 
-        public void Drive()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Fly()
         {
             Console.WriteLine($"The {Name} Cessna effortlessly glides through the clouds like a gleaming god of the Sun!");
@@ -36,12 +31,12 @@ namespace Vehicles
 
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Cessna starting...");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Cessna stopping...");
         }
     }
 }

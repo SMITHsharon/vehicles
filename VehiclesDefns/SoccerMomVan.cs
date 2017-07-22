@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class SoccerMomVan : GroundBased, IWheelsDoors, IEngine, IGroundBased, IVehicle
+    public class SoccerMomVan : Vehicle, IWheelsDoors, IEngine, IGroundBased, IVehicle
     {
         public int Wheels { get; set; }
         public int Doors { get; set; }
@@ -30,19 +30,14 @@ namespace Vehicles
             Console.WriteLine($"This {Name} van hauls piles of kids around!");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Soccer Mom Van starting...");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Soccer Mom Van stopping...");
         }
     }
 }

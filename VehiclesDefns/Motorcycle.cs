@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Motorcycle : GroundBased, IEngine, IGroundBased, IVehicle
+    public class Motorcycle : Vehicle, IEngine, IGroundBased, IVehicle
     {
         public int Wheels => 2;
         public int PassengerCapacity { get; set; }
@@ -26,19 +26,14 @@ namespace Vehicles
             Console.WriteLine($"The {Name} motorcycle screams down the highway!");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Motorcycle starting...");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Motorcycle stopping...");
         }
     }
 }

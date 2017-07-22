@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class HangGlider : AirBased, IEngine, IAirBased, IVehicle
+    public class HangGlider : Vehicle, IEngine, IAirBased, IVehicle
     {
         public int PassengerCapacity { get; set; } = 1;
         public bool Winged { get; set; } = true;
@@ -20,11 +20,6 @@ namespace Vehicles
             MaxAirSpeed = maxAirSpeed;
         }
 
-        public void Drive()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Fly()
         {
             Console.WriteLine($"This {Name} hang glider effortlessly glides through the air like a bird ~~");
@@ -32,12 +27,12 @@ namespace Vehicles
 
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Hang glider starting...");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Hang glider stopping...");
         }
     }
 }

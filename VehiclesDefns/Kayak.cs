@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Kayak : WaterBased, IWaterBased, IVehicle
+    public class Kayak : Vehicle, IWaterBased, IVehicle
     
     {
         public int PassengerCapacity { get; set; }
@@ -20,19 +20,14 @@ namespace Vehicles
             Console.WriteLine($"The {Name} kayak is the most amazing of all for solitude and serenity in the wilderness!");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Kayak starting...");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Kayak stopping...");
         }
     }
 }

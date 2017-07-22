@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Vehicles
 {
-    public class GroundBased 
+    public class Vehicle 
     {
         public string Name { get; set; }
     }

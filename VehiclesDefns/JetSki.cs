@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class JetSki : WaterBased, IEngine, IWaterBased, IVehicle
+    public class JetSki : Vehicle, IEngine, IWaterBased, IVehicle
     
     {
         public int PassengerCapacity { get; set; }
@@ -25,19 +25,14 @@ namespace Vehicles
             Console.WriteLine($"The {Name} jetski zips through the waves with the greatest of ease!");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("JetSki starting...");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("JetSki stopping...");
         }
     }
 }
