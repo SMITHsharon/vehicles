@@ -3,21 +3,23 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class JetSki : WaterBased, IEngine, IWaterBased, IVehicle
+    public class JetSki : IWaterVehicle, IDrivableVehicle
     
     {
-        public int PassengerCapacity { get; set; }
-        public string TransmissionType { get; set; } = "Automatic";
-        public double EngineVolume { get; set; }
-        public double MaxWaterSpeed { get; set; }
+        public int Wheels {get; set; } = 0;
+        public int Doors {get; set; } = 0;
+        public int PassengerCapacity { get; set; } = 1;
+        public string TransmissionType { get; set; } = "Variable";
+        public double EngineVolume { get; set; } = 3.1;
+        public double MaxSpeed { get; set; } = 42;
 
         public JetSki (string name, int passengerCapacity, 
-                       double engineVolume, int maxWaterSpeed)
+                       double engineVolume, int maxSpeed)
         {
             Name = name;
             PassengerCapacity = passengerCapacity;
             EngineVolume = engineVolume;
-            MaxWaterSpeed = maxWaterSpeed;
+            MaxSpeed = maxSpeed;
         }
 
         public void Drive()
@@ -25,19 +27,14 @@ namespace Vehicles
             Console.WriteLine($"The {Name} jetski zips through the waves with the greatest of ease!");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Hey y'all watch this.");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Beer Me!");
         }
     }
 }

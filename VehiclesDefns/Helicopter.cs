@@ -3,47 +3,42 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Helicopter : AirBased, IEngine, IWheelsDoors, IAirBased, IVehicle
+    public class Helicopter : IAirVehicle
     {
         public int Wheels { get; set; } = 0;
-        public int Doors { get; set; }
-        public int PassengerCapacity { get; set; }
+        public int Doors { get; set; } = 4;
+        public int PassengerCapacity { get; set; } = 3;
         public bool Winged { get; set; } = false;
-        public string TransmissionType { get; set; }
-        public double EngineVolume { get; set; }
-        public double MaxLandSpeed { get; set; } = 0;
-        public double MaxAirSpeed { get; set; }
+        public string TransmissionType { get; set; } = "Fixed";
+        public double EngineVolume { get; set; } = 20;
+        // public double MaxLandSpeed { get; set; } = 0;
+        public double MaxSpeed { get; set; } = 96;
 
         public Helicopter (string name, int doors, int passengerCapacity, 
                            string transmissionType, double engineVolume, 
-                           double maxAirSpeed)
+                           double maxSpeed)
         {
             Name = name;
             Doors = doors;
             PassengerCapacity = passengerCapacity;
             TransmissionType = transmissionType;
             EngineVolume = engineVolume;
-            MaxAirSpeed = maxAirSpeed;
-        }
-
-        public void Drive()
-        {
-            throw new NotImplementedException();
+            MaxSpeed = maxSpeed;
         }
 
         public void Fly()
         {
-            Console.WriteLine($"The {Name} helicopter buzzes around with amazing agility!");
+            Console.WriteLine($"Wheee! The {Name} helicopter is buzzing around!");
+        }
+
+        public void Lnd()
+        {
+            Console.WriteLine("Aren't you glad I didn't turn off the engine???");
         }
 
         public void Start()
         {
-            throw new NotImplementedException();
-        }
-
-        public void Stop()
-        {
-            throw new NotImplementedException();
+            Console.WriteLine($"Get to the {Name} Choppa!");
         }
     }
 }

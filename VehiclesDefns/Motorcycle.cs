@@ -3,22 +3,23 @@ using System.Linq;
 
 namespace Vehicles 
 {
-    public class Motorcycle : GroundBased, IEngine, IGroundBased, IVehicle
+    public class Motorcycle : IGroundVehicle, IDrivable
     {
         public int Wheels => 2;
+        public int Door {get; set; } => 0;
         public int PassengerCapacity { get; set; }
         public string TransmissionType { get; set; }
-        public double EngineVolume { get; set; }
-        public double MaxLandSpeed { get; set; }
+        public double EngineVolume { get; set; } = 1.3;
+        public double MaxSpeed { get; set; } = 160.4;
 
         public Motorcycle (string name, int passengerCapacity, string transmissionType, 
-                           double engineVolume, double maxLandSpeed)
+                           double engineVolume, double maxSpeed)
         {
             Name = name;
             PassengerCapacity = passengerCapacity;
             TransmissionType = transmissionType;
             EngineVolume = engineVolume;
-            MaxLandSpeed = maxLandSpeed;
+            MaxSpeed = maxSpeed;
         }
 
         public void Drive()
@@ -26,19 +27,14 @@ namespace Vehicles
             Console.WriteLine($"The {Name} motorcycle screams down the highway!");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Born to be WiIiIiLd!");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            ConsoleWriteLine("Gee officer, no I don't know how fast I was going ...");
         }
     }
 }

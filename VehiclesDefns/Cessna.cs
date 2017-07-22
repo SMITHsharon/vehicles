@@ -7,26 +7,21 @@ namespace Vehicles
     {
         public int Wheels { get; set; } = 3;
         public int Doors { get; set; } = 3;
-        public int PassengerCapacity { get; set; }
+        public int PassengerCapacity { get; set; } = 113;
         public bool Winged { get; set; } = true;
         public string TransmissionType { get; set; } = "None";
-        public double EngineVolume { get; set; }
-        public double MaxLandSpeed { get; set; }
-        public double MaxAirSpeed { get; set; }
+        public double EngineVolume { get; set; } = 31.1;
+        // public double MaxLandSpeed { get; set; }
+        public double MaxSpeed { get; set; } = 309.0;
 
         public Cessna (string name, int passengerCapacity, double engineVolume, 
-                       double maxLandSpeed, double maxAirSpeed)
+                       double maxSpeed)
         {
             Name = name;
             PassengerCapacity = passengerCapacity;
             EngineVolume = engineVolume;
-            MaxLandSpeed = maxLandSpeed;
+            // MaxLandSpeed = maxLandSpeed;
             MaxAirSpeed = maxAirSpeed;
-        }
-
-        public void Drive()
-        {
-            throw new NotImplementedException();
         }
 
         public void Fly()
@@ -36,12 +31,12 @@ namespace Vehicles
 
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Clear!");
         }
 
-        public void Stop()
+        public void Land()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bump....Bump...Bump..Bump.Bump.Skid");
         }
     }
 }

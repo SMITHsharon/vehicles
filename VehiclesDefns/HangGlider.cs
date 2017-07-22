@@ -9,7 +9,7 @@ namespace Vehicles
         public bool Winged { get; set; } = true;
         public string TransmissionType { get; set; } = "None";
         public double EngineVolume { get; set; }
-        public double MaxLandSpeed { get; set; } = 0.0;
+        // public double MaxLandSpeed { get; set; } = 0.0;
         public double MaxAirSpeed { get; set; }
 
         public HangGlider (string name, int passengerCapacity, double engineVolume, double maxAirSpeed)

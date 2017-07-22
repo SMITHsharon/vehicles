@@ -20,17 +20,7 @@ namespace Vehicles
             Console.WriteLine($"The {Name} kayak is the most amazing of all for solitude and serenity in the wilderness!");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Stop()
         {
             throw new NotImplementedException();
         }
