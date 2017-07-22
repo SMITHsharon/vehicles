@@ -16,3 +16,17 @@ This exercise, written in C#, converted given code into a system that is more fl
 - Built separate collections of all vehicles that are air-based (can fly), land-based (can drive), and water-based (can drive). 
 - Used a single for each statement for each collection, to have each vehicle fly/drive (output). 
 
+
+### Technologies Used
+- `C#`
+- Visual Studio Code
+
+
+### How To View The Screen 
+```
+git clone https://github.com/SMITHsharon/addressBook.git
+cd vehicles
+```
+
+### Contributor
+[Sharon Smith](https://github.com/SMITHsharon)
