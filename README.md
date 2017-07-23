@@ -21,8 +21,6 @@ This exercise, written in C#, converted given code into a system that is more fl
 - Visual Studio Code
 
 
-### How To View The Screen 
-```
 git clone https://github.com/SMITHsharon/vehicles.git
 cd vehicles
 ```
